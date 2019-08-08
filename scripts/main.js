@@ -96,11 +96,17 @@ const buildResultsTable = (userData, reposData) => {
     reposData.forEach(repo => {
         const { name, html_url, forks_count, stargazers_count } = repo;
         reposTable.innerHTML += `
-              <div>
-                <h4><a href=${html_url} target="_blank">${name}</a></h4>
-                <div>
-                    <img src="assets/images/star.png"> ${stargazers_count}
-                    <img src="assets/images/fork.png"> ${forks_count}
+              <div class="flex">
+                <div class="reposTitle">
+                    <h4><a href=${html_url} target="_blank">${name}</a></h4>
+                </div>
+                <div class="flex">
+                    <div>
+                        <img src="assets/images/star.png"> ${stargazers_count}
+                    </div>
+                    <div>
+                        <img src="assets/images/fork.png"> ${forks_count}
+                    </div> 
                 </div>
               </div>`;
     });

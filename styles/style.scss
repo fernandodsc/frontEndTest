@@ -154,9 +154,7 @@ body {
     border-radius: 3px;
 }
 
-
-  
-  .btn {
+.btn {
    color:black;
    font-weight: bold;
    font-size: 15px;
@@ -165,7 +163,14 @@ body {
    border-radius:3px;
   }
   
+.flex {
+    display: flex;
+}
 
+.reposTitle{
+    max-width: 250px;
+    word-break: break-all;
+}
 
 
 
