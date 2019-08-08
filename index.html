@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Github profile finder</title>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="spinner-container">
+            <div id="spinner"></div>
+        </div>
+
+        <div class="form-container">
+
+            <form>
+                <input type="text" id="search-input" placeholder="Search username..." class="radius" />
+                <button id="search-button" class="radius btn">Search</button>
+            </form>
+
+            <div id="error"></div>
+
+            <div id="search-results">
+
+                <div class="user-info">
+                    <img id="user-image" alt="User avatar" class="radius" />
+
+                    <div>
+                        <p id="username"></p>
+                        <h2 id="full-name"></h2>
+                        <p id="user-bio"></p>
+                    </div>
+                </div>
+
+                <div class="repos">
+                    <h3>Repositories</h3>
+                    <div id="no-repos">This user does not have any repositories.</div>
+                    <div id="repos-table"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

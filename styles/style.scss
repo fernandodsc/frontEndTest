@@ -1,0 +1,172 @@
+@import "variables";
+@import "mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  font-family: 'Roboto', sans-serif;
+  #wrap {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form-container {
+  margin-top: 5rem;
+  width: 400px;
+  background-color: $form-color;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  @include box-shadow(6px 7px 9px 4px rgba(54, 51, 51, 0.377));
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    width: 80%;
+    margin-right: 10px;
+  }
+  button { 
+    color:black;
+    font-family: 'Roboto', sans-serif;    font-weight: bold;
+    font-size: 15px;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:3px;
+    @include button-bg(#dfdfdf);
+
+  }
+}
+
+#search-results {
+  display: none;
+  .user-info {
+    display: flex;
+    margin-top: 30px;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+    div {
+      flex-grow: 1;
+      margin-left: 25px;
+      p,
+      h2 {
+        margin: 0;
+      }
+      p:first-child {
+        font-style: italic;
+      }
+    }
+  }
+  .repos {
+    h3 {
+      padding-bottom: 10px;
+      margin-bottom: 0;
+      border-bottom: 2px black solid;
+    }
+    #repos-table {
+      width: 100%;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 15px 0;
+        border-bottom: 0.5px #cccccc solid;
+      }
+      & div:last-child {
+        border-bottom: none;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      h4 {
+        margin: 0;
+      }
+    }
+    #no-repos {
+      display: none;
+      margin-top: 10px;
+    }
+  }
+}
+
+#error {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #fcc9c9;
+  color: #920f07;
+  padding: 5px 0;
+  border: 1px solid #a89191;
+  border-radius: 3px;
+  p {
+    margin: 0;
+  }
+}
+
+#spinner{
+    visibility: hidden;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+  }
+  
+#spinner.show {
+    visibility: visible;
+  }
+
+#more {
+      display: none;
+}
+
+
+
+#spinner-container{
+    visibility: hidden;
+      width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    @include horizontal-gradient($green-marfeel, $orange-marfeel);
+}
+
+.radius{
+    border-radius: 3px;
+}
+
+
+  
+  .btn {
+   color:black;
+   font-weight: bold;
+   font-size: 15px;
+   text-decoration:none;
+   padding:10px 15px;
+   border-radius:3px;
+  }
+  
+
+
+
+
+

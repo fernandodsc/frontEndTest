@@ -1,0 +1,16 @@
+{
+  "name": "marfeel",
+  "version": "1.0.0",
+  "description": "Github profile finder web app",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha --reporter list"
+  },
+  "author": "ferdsc_2019",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "node-fetch": "^2.6.0"
+  }
+}
